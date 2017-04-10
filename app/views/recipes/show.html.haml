@@ -1,0 +1,7 @@
+%h2= @recipe.title
+%p= @recipe.description
+%p= @recipe.ingredient
+%p= @recipe.instruction
+
+= link_to "Edit", edit_recipe_path(@recipe)
+= link_to "Delete", recipe_path(@recipe), method: :delete, data: {confirm: "Are you sure to delete the recipe?"}
